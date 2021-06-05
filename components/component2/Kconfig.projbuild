@@ -1,0 +1,10 @@
+menu "Component2 FreeRTOS Task Delay"
+
+    config COM2_TASK_DELAY_MS
+        int "Task2 Delay in ms"
+        range 100 1000
+        default 500
+        help
+            FreeRTOS vTaskDelay Parameter.
+
+endmenu

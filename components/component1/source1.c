@@ -7,6 +7,8 @@
 #include "include1.h"  // include from source/component1
 #include "include2.h"  // include from source/component2
 
+#define TASK1_DELAY_PARAM	(CONFIG_COM1_TASK_DELAY_MS)
+
 static void task1(void *pvParams);
 
 extern void foo1(void) 
@@ -37,7 +39,7 @@ static void task1(void *pvParams)
 		
 		printf("Execution Count1 - %d \r\n", i);
 		
-		vTaskDelay(pdMS_TO_TICKS(1000));
+		vTaskDelay(pdMS_TO_TICKS(TASK1_DELAY_PARAM));
 	}
 	
 	vTaskDelete(NULL);

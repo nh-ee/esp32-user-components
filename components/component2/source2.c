@@ -6,6 +6,8 @@
 
 #include "include2.h"
 
+#define TASK2_DELAY_PARAM	(CONFIG_COM2_TASK_DELAY_MS)
+
 static void sampleTask(void *pvParams);
 
 extern void foo2(void) 
@@ -25,7 +27,7 @@ static void sampleTask(void *pvParams)
 		
 		printf("Execution Count2 - %d \r\n", i);
 		
-		vTaskDelay(pdMS_TO_TICKS(500));
+		vTaskDelay(pdMS_TO_TICKS(TASK2_DELAY_PARAM));
 	}
 	
 	vTaskDelete(NULL);
